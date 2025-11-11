@@ -1,4 +1,4 @@
-import { BasePage } from "../../pages/base.page"
+import { BasePage } from "../../pages/base.page";
 import { AppPagesEnum } from "../../src/shared/app-pages.enum";
 import { ButtonTextEnum } from "../../src/shared/button-text.enum";
 import { LoginApi } from "../../services/api-login";
@@ -15,16 +15,10 @@ export class BaseActions extends BasePage{
         cy.wait(1000);
         switch (option){
             case AppPagesEnum.HOME:
-                cy.get(this.menuOptions).contains('Home').click();
+                cy.get(this.loadMoreButton).contains('Home').click();
                 break;
-            case AppPagesEnum.MYACCOUNT:
-                cy.get(this.menuOptions).contains('My Account').click();;
-                break;
-            case AppPagesEnum.BANKACCOUNTS:
-                cy.get(this.menuOptions).contains('Bank Accounts').click();;
-                break;
-            case AppPagesEnum.NOTIFICATIONS:
-                cy.get(this.menuOptions).contains('Notifications').click();;
+            case AppPagesEnum.MOVIESEARCH:
+                cy.get(this.searchButton).contains('Movie Search').click();;
                 break;
             default:
                 throw Error(`Wrong page option: ${option}`);
@@ -35,30 +29,16 @@ export class BaseActions extends BasePage{
     clickOnButton(option: string){
       cy.wait(1000)
       switch(option){
-        case ButtonTextEnum.NEXT:
-            cy.get(this.buttonOptions).should('be.visible').contains('Next').click({force:true});
+        case ButtonTextEnum.SEARCH:
+            cy.get(this.searchButton).should('be.visible').contains('Search').click();
             break;
-        case ButtonTextEnum.CREATE:
-            cy.get(this.buttonOptions).should('be.visible').contains('Create').click({force:true});
+        case ButtonTextEnum.ADDTOFAVORITES:
+            cy.get(this.addToFavoritesButton).should('be.visible').contains('Add to Favorites').click();
             break;
-        case ButtonTextEnum.DELETE:
-            cy.get(this.buttonOptions).should('be.visible').contains('Delete').click({force:true});
+        case ButtonTextEnum.REMOVEFROMFAVORITES:
+            cy.get(this.removeFromFavoritesButton).should('be.visible').contains('Remove from Favorites').click();
             break;
-        case ButtonTextEnum.SAVE:
-            cy.get(this.buttonOptions).should('be.visible').contains('Save').click({force:true});
-            break; 
-        case ButtonTextEnum.DISMISS:
-            cy.get(this.labelOptions).should('be.visible').contains('Notifications');
-            break; 
-        case ButtonTextEnum.NEW:
-            cy.get(this.buttonOptions).should('be.visible').contains('New').click({force:true});
-            break;
-        case ButtonTextEnum.PAY:
-            cy.get(this.buttonOptions).should('be.visible').contains('Pay').click({force:true});
-            break;
-        case ButtonTextEnum.REQUEST:
-            cy.get(this.buttonOptions).should('be.visible').contains('Request').click({force:true});
-            break;
+        
         default:
             throw Error(`Wrong botton option: ${option}`);
       }

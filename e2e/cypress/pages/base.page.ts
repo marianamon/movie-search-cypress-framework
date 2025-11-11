@@ -1,8 +1,7 @@
-
-
 export class BasePage {
 
-    public menuOptions= '.MuiTypography-displayBlock';
-    protected buttonOptions = '.MuiButton-label';
-    public labelOptions = '.MuiTypography-colorPrimary.MuiTypography-gutterBottom';
+    public searchButton = 'button[type="submit"]';
+    public addToFavoritesButton = 'button[style*="background-color: green"][style*="color: white"][style*="Add to Favorites"]';
+    public removeFromFavoritesButton = 'button[style*="background-color"][style*="Remove from Favorites"]';
+    public loadMoreButton = 'button[style*="background-color: blue"][style*="color: white"][style*="Load More"]';
 }
