@@ -24,17 +24,17 @@ jobs:
         run: |
           
           # Backend
-          cd movie-search-QA-challenge/backend
           npm install
           cp env.example .env
           echo "OMDB_API_KEY=${{ vars.OMDB_API_KEY }}" >> .env
           nohup npm start &
+          working-directory: ./movie-search-QA-challenge/backend
 
           # Frontend
           cd ../frontend
           npm install
           nohup npm run dev &
-        shell: bash
+          working-directory: ./movie-search-QA-challenge/frontend
 
       - name: Wait for app to be ready
         run: |
