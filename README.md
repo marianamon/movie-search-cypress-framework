@@ -18,7 +18,7 @@
   - [X] Spanish Version>> https://docs.google.com/document/d/1vI5S_7veQWgMU4dDLMa5D2mxPQVts_XG/edit?usp=sharing&ouid=109409969068419304616&rtpof=true&sd=true
 
 4. Testing Infrastructure (Priority: Medium)
-- [X] Set up basic test automation: Execution evidence >>https://drive.google.com/file/d/1pK9DTjnx8EZQL1YKz3uWEMEOebRsYgDY/view?usp=sharing
+- [X] Set up basic test automation: Execution evidence >> https://drive.google.com/file/d/1B4bQFbZcYiFldEnWcT3w3dvc5eIbdu8M/view?usp=sharing
 - [X] Configure test environment
 - [X] Create reusable test utilities
 - [X] Implement test reporting
