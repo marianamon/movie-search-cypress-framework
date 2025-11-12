@@ -11,9 +11,10 @@ jobs:
 
       - name: Clone App repository
         run: |
-          
-          git clone https://github.com/kamran-mhp-collab/movie-search-QA-challenge.git app
-          ls -R app
+           
+           git clone https://github.com/kamran-mhp-collab/movie-search-QA-challenge.git movie-search-QA-challenge
+           ls -R movie-search-QA-challenge
+
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -24,7 +25,7 @@ jobs:
         run: |
           
           # Backend
-          cd $GITHUB_WORKSPACE/app/movie-search-QA-challenge/backend
+          cd $GITHUB_WORKSPACE/movie-search-QA-challenge/backend
           npm install
           cp env.example .env
           echo "OMDB_API_KEY=${{ vars.OMDB_API_KEY }}" >> .env
@@ -32,15 +33,24 @@ jobs:
           
 
           # Frontend
-          cd $GITHUB_WORKSPACE/app/movie-search-QA-challenge/frontend
+          cd $GITHUB_WORKSPACE/movie-search-QA-challenge/frontend
           npm install
           nohup npm run dev &
         shell: bash 
 
       - name: Wait for app to be ready
         run: |
-          echo "Waiting for app to start..."
-          sleep 15  
+          
+          echo "Esperando que el backend esté listo..."
+              for i in {1..30}; do
+                if curl -s http://localhost:3000/health > /dev/null; then
+                  echo "Backend está listo."
+                  break
+                fi
+                echo "Backend no está listo, reintentando..."
+                sleep 5
+              done
+
 
       - name: Install dependencies for E2E
         run: npm install
