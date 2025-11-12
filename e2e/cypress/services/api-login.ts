@@ -1,10 +1,6 @@
-
 export class LoginApi {
     public login(){
-      Cypress.log({
-        displayName: "AUTH0 LOGIN",
-        message: [`🔐 Authenticating ...`],
-      });
+      cy.log("🔐 AUTH0 LOGIN: Authenticating ...");
         const options = {
         url: Cypress.env('AUTH_URL'),
         method: 'POST',
@@ -23,7 +19,7 @@ export class LoginApi {
         log: true,
       };
     
-      cy.request(options).then((response) => {
+      cy.request(options).then((response: Cypress.Response<any>) => {
         const { access_token } = response.body;
         const tokenData = {
           body: {
@@ -37,7 +33,7 @@ export class LoginApi {
           },
           expiresAt: Math.floor(Date.now() / 1000) + 86400
         };
-        cy.window().then((win) => {
+        cy.window().then((win: Window) => {
           win.localStorage.setItem('auth_token', JSON.stringify(tokenData));
           cy.log('Access token received and stored in local storage:', tokenData);
           win.dispatchEvent(new Event('storage'));
@@ -47,28 +43,28 @@ export class LoginApi {
     }
 
     public visitAuthenticated(url: string){
-        cy.window().then((win) => {
+        cy.window().then((win: Window) => {
             const tokenString = win.localStorage.getItem('auth_token');
             if (tokenString) {
               const tokenData = JSON.parse(tokenString);
               if (tokenData && tokenData.body && tokenData.body.access_token) {
                 cy.log('Access token found in local storage:', tokenData.body.access_token);
                 cy.visit(url, {
-                  onBeforeLoad: (win) => {
+                  onBeforeLoad: (win: Window) => {
                     win.localStorage.setItem('auth_token', JSON.stringify(tokenData));
                     win.dispatchEvent(new Event('storage'));
                   }
                 });
         } else {
             cy.log('No access token found. Redirecting to login.');
-            cy.window().then((win) => {
+            cy.window().then((win: Window) => {
               const tokenString = win.localStorage.getItem('auth_token');
               if (tokenString) {
                 const newTokenData = JSON.parse(tokenString);
                 if (newTokenData && newTokenData.body && newTokenData.body.access_token) {
                   cy.log('Access token obtained after login:', newTokenData.body.access_token);
                   cy.visit(url, {
-                    onBeforeLoad: (win) => {
+                    onBeforeLoad: (win: Window) => {
                       win.localStorage.setItem('auth_token', JSON.stringify(newTokenData));
                       win.dispatchEvent(new Event('storage'));
                     }
