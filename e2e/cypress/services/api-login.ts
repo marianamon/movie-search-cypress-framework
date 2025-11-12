@@ -56,7 +56,6 @@ export class LoginApi {
                 cy.visit(url, {
                   onBeforeLoad: (win) => {
                     win.localStorage.setItem('auth_token', JSON.stringify(tokenData));
-                    // Forzar la lectura del token desde local storage
                     win.dispatchEvent(new Event('storage'));
                   }
                 });
