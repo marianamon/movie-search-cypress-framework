@@ -13,7 +13,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '20'
       - name: Install dependencies
         run: npm install
         working-directory: ./e2e
@@ -25,4 +25,3 @@ jobs:
           working-directory: ./e2e
         env:
           CYPRESS_AUTH_BASE_URL: ${{ secrets.AUTH_BASE_URL }}
-          
