@@ -24,7 +24,7 @@ jobs:
         run: |
           
           # Backend
-          cd backend
+          cd movie-search-QA-challenge/backend
           npm install
           cp env.example .env
           echo "OMDB_API_KEY=${{ vars.OMDB_API_KEY }}" >> .env
