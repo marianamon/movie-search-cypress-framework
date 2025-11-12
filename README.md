@@ -70,14 +70,8 @@ npx cypress run --spec "e2e/cypress/e2e/movie-search/movie-search.feature"
 ## Environment Variables
 Environment variables are stored in the `.env` file. Update the following variables as needed:
 ```env
-CYPRESS_AUTH_AUDIENCE=
-CYPRESS_AUTH_URL=
+
 CYPRESS_AUTH_BASE_URL=
-CYPRESS_AUTH_DOMAIN=
-CYPRESS_AUTH_CLIENT_ID=
-CYPRESS_AUTH_CLIENT_SECRET=
-CYPRESS_AUTH_USERNAME=
-CYPRESS_AUTH_PASSWORD=
 ```
 
 ## Writing Tests
