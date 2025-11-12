@@ -32,6 +32,7 @@ This is an end-to-end (E2E) testing framework built using Cypress. The framework
 - **Page Object Model (POM)**: Organizes locators and methods for interacting with web pages into separate classes.
 - **Cucumber Integration**: Supports BDD-style test cases using Gherkin syntax.
 - **Allure Reports**: Generates detailed and interactive test execution reports.
+- **CI/CD Implementation using GitHub Actions**: workflows type cron, Docker compose and parallel
 
 ## Prerequisites
 - Node.js (v14 or higher)
