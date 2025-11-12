@@ -5,6 +5,13 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
+      
+      - name: Start backend and frontend
+        run: |
+          
+          git clone https://github.com/kamran-mhp-collab/movie-search-QA-challenge.git app
+          ls -R app
+
       - name: Checkout
         uses: actions/checkout@v4.1.7
 
@@ -15,7 +22,9 @@ jobs:
 
       - name: Start backend and frontend
         run: |
+          
           # Backend
+          cd movie-search-challenge
           cd backend
           npm install
           cp env.example .env
@@ -23,6 +32,7 @@ jobs:
           nohup npm start &
 
           # Frontend
+          cd movie-search-challenge
           cd ../frontend
           npm install
           nohup npm run dev &
