@@ -6,14 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
+        
       - name: Start backend and frontend
         run: |
           
           git clone https://github.com/kamran-mhp-collab/movie-search-QA-challenge.git app
           ls -R app
-
-      - name: Checkout
-        uses: actions/checkout@v4.1.7
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
