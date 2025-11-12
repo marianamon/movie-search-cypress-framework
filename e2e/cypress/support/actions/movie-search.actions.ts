@@ -9,8 +9,7 @@ export class MovieSearchActions extends MovieSearchPage {
     }
   
     verifyMovieList(){
-        cy.wait(3000);
-        cy.get(this.favoriteList).should('be.visible');
+        cy.get(this.favoriteList, {timeout: 1000}).should('be.visible');
     }
 
     verifyMovieremoved(){
@@ -19,5 +18,13 @@ export class MovieSearchActions extends MovieSearchPage {
 
     verifyMovieAdded(){
         cy.contains('Remove from Favorites').should('be.enabled');
+    }
+
+    verifyMovieDetails(){
+        cy.get(this.movieDetails).should('be.visible');
+    } 
+    
+    verifyMovieListEmpty(){
+        cy.get(this.movieDetails, {timeout: 1000}).should('not.exist');
     }
 }

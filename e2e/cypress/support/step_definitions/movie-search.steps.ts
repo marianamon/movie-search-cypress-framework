@@ -24,3 +24,9 @@ Then(/^the movie is removed to the favorites list$/, ()=> {
 Then(/^the movie is added to the favorites list$/, ()=> {
     movieSearchActions.verifyMovieAdded();
 });
+Then(/^the movie details are displayed$/, ()=> {
+    movieSearchActions.verifyMovieDetails();
+});
+Then(/^the movies are not returned to the movie list$/, ()=> {
+    movieSearchActions.verifyMovieListEmpty();
+});

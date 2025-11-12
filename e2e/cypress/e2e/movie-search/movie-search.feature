@@ -47,3 +47,24 @@ Feature: Movie Search - Add and Delete to favorites
           | Movie Name | 
           | "Crazy" | 
           
+    Scenario Outline: View movie details
+        Given that the user is in the "Movie Search" page
+        And the user enters the movie <Movie Name> to the search bar
+        And the user clicks on the "Search" button
+        When the movies are returned to the movie list
+        Then the movie details are displayed
+        Examples:
+          | Movie Name | 
+          | "Love" |
+
+
+      Scenario Outline: Handle no results found
+        Given that the user is in the "Movie Search" page
+        When the user enters the movie <Movie Name> to the search bar
+        And the user clicks on the "Search" button
+        Then the movies are not returned to the movie list
+        Examples:
+          | Movie Name | 
+          | "asdasdasd" |
+
+      
