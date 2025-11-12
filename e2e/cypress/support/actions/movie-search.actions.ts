@@ -14,8 +14,10 @@ export class MovieSearchActions extends MovieSearchPage {
     }
 
     verifyMovieremoved(){
-        cy.wait(3000);
-        cy.get(this.favoriteList).should('be.visible');
+        cy.contains('Remove from Favorites').should('not.exist');
     }
 
+    verifyMovieAdded(){
+        cy.contains('Remove from Favorites').should('be.enabled');
+    }
 }

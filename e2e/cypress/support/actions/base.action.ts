@@ -6,9 +6,8 @@ import { LoginApi } from "../../services/api-login";
 const loginApi = new LoginApi();
 
 export class BaseActions extends BasePage{
-   generateTokenAndAuthentication(){
-    loginApi.login();
-    loginApi.visitAuthenticated(Cypress.env('AUTH_BASE_URL'))  
+   visitUrl(url: string){
+        cy.visit(this.baseUrl);
     }
     
     goToThePage(option: string){
@@ -18,7 +17,7 @@ export class BaseActions extends BasePage{
                 cy.get(this.loadMoreButton).contains('Home').click();
                 break;
             case AppPagesEnum.MOVIESEARCH:
-                cy.get(this.searchButton).contains('Movie Search').click();;
+                cy.get(this.searchButton).contains('Search').click();;
                 break;
             default:
                 throw Error(`Wrong page option: ${option}`);
@@ -27,16 +26,19 @@ export class BaseActions extends BasePage{
     }
     
     clickOnButton(option: string){
-      cy.wait(1000)
       switch(option){
         case ButtonTextEnum.SEARCH:
             cy.get(this.searchButton).should('be.visible').contains('Search').click();
             break;
         case ButtonTextEnum.ADDTOFAVORITES:
-            cy.get(this.addToFavoritesButton).should('be.visible').contains('Add to Favorites').click();
+            cy.contains('Add to Favorites').click();
             break;
         case ButtonTextEnum.REMOVEFROMFAVORITES:
-            cy.get(this.removeFromFavoritesButton).should('be.visible').contains('Remove from Favorites').click();
+            cy.contains('Remove from Favorites').click();
+            break;
+        case ButtonTextEnum.LOADMORE:
+            cy.scrollTo('bottom');
+            cy.contains('Load More').click();
             break;
         
         default:

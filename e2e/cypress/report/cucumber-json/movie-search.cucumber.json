@@ -1,0 +1,373 @@
+[
+  {
+    "description": "    As a user\n    I want to search for movies and add or remove them from my favorites list\n    So that I can easily access my preferred movies",
+    "keyword": "Feature",
+    "name": "Movie Search - Add and Delete to favorites",
+    "line": 1,
+    "id": "movie-search---add-and-delete-to-favorites",
+    "tags": [],
+    "uri": "movie-search.feature",
+    "elements": [
+      {
+        "id": "movie-search---add-and-delete-to-favorites;search-for-a-movie",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Search for a movie",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "that the user is in the \"Movie Search\" page",
+            "result": {
+              "status": "passed",
+              "duration": 1916000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "the user enters the movie \"Romantic\" to the search bar",
+            "result": {
+              "status": "passed",
+              "duration": 239000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user clicks on the \"Search\" button",
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the movies are returned to the movie list",
+            "result": {
+              "status": "passed",
+              "duration": 3014000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "movie-search---add-and-delete-to-favorites;search-for-a-movie",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Search for a movie",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "that the user is in the \"Movie Search\" page",
+            "result": {
+              "status": "passed",
+              "duration": 1872000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "the user enters the movie \"Terror\" to the search bar",
+            "result": {
+              "status": "passed",
+              "duration": 212000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user clicks on the \"Search\" button",
+            "result": {
+              "status": "passed",
+              "duration": 93000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the movies are returned to the movie list",
+            "result": {
+              "status": "passed",
+              "duration": 3014000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "movie-search---add-and-delete-to-favorites;search-for-a-movie",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Search for a movie",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "that the user is in the \"Movie Search\" page",
+            "result": {
+              "status": "passed",
+              "duration": 1779000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "the user enters the movie \"Fiction\" to the search bar",
+            "result": {
+              "status": "passed",
+              "duration": 226000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user clicks on the \"Search\" button",
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the movies are returned to the movie list",
+            "result": {
+              "status": "passed",
+              "duration": 3016000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "movie-search---add-and-delete-to-favorites;add-a-movie-to-favorites",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Add a movie to favorites",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "that the user is in the \"Movie Search\" page",
+            "result": {
+              "status": "passed",
+              "duration": 1993000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the user enters the movie \"Romantic\" to the search bar",
+            "result": {
+              "status": "passed",
+              "duration": 243000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "the user clicks on the \"Search\" button",
+            "result": {
+              "status": "passed",
+              "duration": 92000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the movies are returned to the movie list",
+            "result": {
+              "status": "passed",
+              "duration": 3014000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "the user clicks on the \"Add to Favorites\" button",
+            "result": {
+              "status": "passed",
+              "duration": 97000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "the movie is added to the favorites list",
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "movie-search---add-and-delete-to-favorites;remove-a-movie-from-favorites",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "Remove a movie from favorites",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "that the user is in the \"Movie Search\" page",
+            "result": {
+              "status": "passed",
+              "duration": 1833000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "the user enters the movie \"Romantic\" to the search bar",
+            "result": {
+              "status": "passed",
+              "duration": 238000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "the user clicks on the \"Search\" button",
+            "result": {
+              "status": "passed",
+              "duration": 94000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "the movies are returned to the movie list",
+            "result": {
+              "status": "passed",
+              "duration": 3017000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "the user clicks on the \"Remove from Favorites\" button",
+            "result": {
+              "status": "passed",
+              "duration": 94000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "the movie is removed to the favorites list",
+            "result": {
+              "status": "passed",
+              "duration": 78000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "movie-search---add-and-delete-to-favorites;load-more-movies",
+        "keyword": "Scenario",
+        "line": 48,
+        "name": "Load more movies",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "that the user is in the \"Movie Search\" page",
+            "result": {
+              "status": "passed",
+              "duration": 2069000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the user enters the movie \"Crazy\" to the search bar",
+            "result": {
+              "status": "passed",
+              "duration": 205000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the user clicks on the \"Search\" button",
+            "result": {
+              "status": "passed",
+              "duration": 92000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "the movies are returned to the movie list",
+            "result": {
+              "status": "passed",
+              "duration": 3016000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "the user clicks on the \"Load More\" button",
+            "result": {
+              "status": "passed",
+              "duration": 102000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 45,
+            "name": "the movies are returned to the movie list",
+            "result": {
+              "status": "passed",
+              "duration": 3016000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
