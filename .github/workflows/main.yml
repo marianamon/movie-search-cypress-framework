@@ -8,8 +8,8 @@ jobs:
       
       - name: Checkout
         uses: actions/checkout@v4.1.7
-        
-      - name: Start backend and frontend
+
+      - name: Clone App repository
         run: |
           
           git clone https://github.com/kamran-mhp-collab/movie-search-QA-challenge.git app
@@ -24,17 +24,18 @@ jobs:
         run: |
           
           # Backend
+          cd $GITHUB_WORKSPACE/app/movie-search-QA-challenge/backend
           npm install
           cp env.example .env
           echo "OMDB_API_KEY=${{ vars.OMDB_API_KEY }}" >> .env
           nohup npm start &
-          working-directory: ./movie-search-QA-challenge/backend
+          
 
           # Frontend
-          cd ../frontend
+          cd $GITHUB_WORKSPACE/app/movie-search-QA-challenge/frontend
           npm install
           nohup npm run dev &
-          working-directory: ./movie-search-QA-challenge/frontend
+        shell: bash 
 
       - name: Wait for app to be ready
         run: |
