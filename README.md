@@ -18,7 +18,7 @@ This is an end-to-end (E2E) testing framework built using Cypress. The framework
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/marianamon/movie-search-cypress-framework.git
    ```
 2. Navigate to the project directory:
    ```bash
