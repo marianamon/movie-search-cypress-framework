@@ -5,8 +5,8 @@
 - [X] Create tests for critical user workflows
 - [X] Test API endpoints for key functionality
 - [X] Identify and document bugs found through testing
- - [X] English version>>https://docs.google.com/document/d/1eKRdDI0xrPEKSHcgcTDPoSVIWk8i49Xq/edit?usp=sharing&ouid=109409969068419304616&rtpof=true&sd=true
- - [X] Spanish Version>> https://docs.google.com/document/d/1x6fzCBvLRENHKL-mHab4jr7nmtDE_Fyd/edit?usp=sharing&ouid=109409969068419304616&rtpof=true&sd=true
+- [X] English version>>https://docs.google.com/document/d/1eKRdDI0xrPEKSHcgcTDPoSVIWk8i49Xq/edit?usp=sharing&ouid=109409969068419304616&rtpof=true&sd=true
+- [X] Spanish Version>> https://docs.google.com/document/d/1x6fzCBvLRENHKL-mHab4jr7nmtDE_Fyd/edit?usp=sharing&ouid=109409969068419304616&rtpof=true&sd=true
 
 
 3. QA Process Design (Priority: Medium)
@@ -14,14 +14,15 @@
 - [X] Design quality gates and checkpoints
 - [X] Create bug tracking approach
 - [X] Outline QA process improvements
-  - [X] English version>> https://docs.google.com/document/d/1Ovywno4_6NsTxQI_LojJHuVt0fD6G1a-/edit?usp=sharing&ouid=109409969068419304616&rtpof=true&sd=true
-  - [X] Spanish Version>> https://docs.google.com/document/d/1vI5S_7veQWgMU4dDLMa5D2mxPQVts_XG/edit?usp=sharing&ouid=109409969068419304616&rtpof=true&sd=true
+- [X] English version>> https://docs.google.com/document/d/1Ovywno4_6NsTxQI_LojJHuVt0fD6G1a-/edit?usp=sharing&ouid=109409969068419304616&rtpof=true&sd=true
+- [X] Spanish Version>> https://docs.google.com/document/d/1vI5S_7veQWgMU4dDLMa5D2mxPQVts_XG/edit?usp=sharing&ouid=109409969068419304616&rtpof=true&sd=true
 
 4. Testing Infrastructure (Priority: Medium)
 - [X] Set up basic test automation: Execution evidence >> https://drive.google.com/file/d/1B4bQFbZcYiFldEnWcT3w3dvc5eIbdu8M/view?usp=sharing
 - [X] Configure test environment
 - [X] Create reusable test utilities
 - [X] Implement test reporting
+- [X] Explanation framework video: https://drive.google.com/file/d/1L4HLiM0D9MaaNgA9YEx8OytgNknwDgw4/view?usp=sharing
 
 ## Description
 This is an end-to-end (E2E) testing framework built using Cypress. The framework is designed to test web applications by simulating user interactions and verifying the expected outcomes. It follows the **Page Object Model (POM)** design pattern, which promotes reusability, maintainability, and scalability of test scripts. The framework is written in **TypeScript** to leverage static typing and modern JavaScript features.
